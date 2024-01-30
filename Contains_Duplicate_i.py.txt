@@ -1,0 +1,11 @@
+class Solution(object):
+    def containsDuplicate(self, nums):
+        new_list = set(nums)
+        if (len(new_list) != len(nums)):
+            return True
+        else:
+            return False
+solution = Solution()
+result = solution.containsDuplicate([1,2,3,1])
+#result = solution.containsDuplicate([1,2,3,4])
+#result = solution.containsDuplicate([1,1,1,3,3,4,3,2,4,2])

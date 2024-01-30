@@ -1,0 +1,15 @@
+class Solution(object):
+    def shuffle(self, nums, n):
+        half_len = int(len(nums)/2)
+        first_half = nums[:half_len]
+        second_half = nums[half_len:]
+        zipped = zip(first_half, second_half)
+        shuffled_array = []
+        result_list = list(zipped)
+        for value in result_list:
+            for val in value:
+                shuffled_array.append(val)
+        return shuffled_array
+            
+solution = Solution()
+result = solution.shuffle([1,2,3,4,4,3,2,1],4)

@@ -1,0 +1,18 @@
+class Solution(object):
+    def maxProfit(self, prices):
+        if prices == [] or str(len(prices)) == "1":
+            return 0
+        else:    
+            max_profit = []
+            for i in range(len(prices)-1):
+                diff = prices[i+1] - prices[i]
+                if int(diff) > 0:
+                    max_profit.append(diff)
+            if len(max_profit) > 0:
+                max_profit = sum(max_profit)
+            else:
+                max_profit = 0
+            return max_profit
+                
+solution = Solution()
+result = solution.maxProfit([4,8])
